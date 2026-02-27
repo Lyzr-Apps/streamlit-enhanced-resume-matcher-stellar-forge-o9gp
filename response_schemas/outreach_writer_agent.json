@@ -1,0 +1,25 @@
+{
+  "agent_name": "Outreach Writer Agent",
+  "agent_id": "69a1bf5b27b2efe3a887dab7",
+  "description": "Generates personalized outreach materials based on resume and job description. Creates a tailored cover letter and LinkedIn connection/message drafts. The tone is professional yet personable.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "cover_letter": "string",
+    "linkedin_connection_note": "string",
+    "linkedin_message": "string",
+    "email_subject_lines": ["string"],
+    "tone_notes": "string"
+  },
+  "example_response": {
+    "cover_letter": "Dear Hiring Manager,\n\nI am writing to express my strong interest in the Software Engineer position...",
+    "linkedin_connection_note": "Hi! I noticed your team is hiring for a role that aligns with my background in full-stack development. Would love to connect!",
+    "linkedin_message": "Thank you for connecting! I recently applied for the Software Engineer role at your company...",
+    "email_subject_lines": [
+      "Experienced Software Engineer - Application for [Role]",
+      "Passionate Full-Stack Developer Ready to Contribute to [Company]"
+    ],
+    "tone_notes": "Professional and confident tone with genuine enthusiasm for the role and company mission."
+  }
+}

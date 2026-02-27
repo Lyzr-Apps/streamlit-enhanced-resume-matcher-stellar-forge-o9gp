@@ -1,0 +1,64 @@
+{
+  "agent_name": "Interview Coach Agent",
+  "agent_id": "69a1bf6b63cead3f400eb1f5",
+  "description": "Analyzes resume and job description to predict likely interview questions. Generates behavioral questions, technical questions, and situational questions with suggested STAR-method response frameworks and key talking points.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "behavioral_questions": [
+      {
+        "question": "string",
+        "why_asked": "string",
+        "suggested_approach": "string",
+        "key_points": ["string"]
+      }
+    ],
+    "technical_questions": [
+      {
+        "question": "string",
+        "topic_area": "string",
+        "suggested_approach": "string",
+        "key_points": ["string"]
+      }
+    ],
+    "situational_questions": [
+      {
+        "question": "string",
+        "scenario_type": "string",
+        "suggested_approach": "string",
+        "key_points": ["string"]
+      }
+    ],
+    "general_tips": ["string"],
+    "preparation_summary": "string"
+  },
+  "example_response": {
+    "behavioral_questions": [
+      {
+        "question": "Tell me about a time you led a challenging project.",
+        "why_asked": "Assesses leadership and problem-solving abilities",
+        "suggested_approach": "Use STAR method: describe the Situation, your Task, Actions taken, and Results achieved",
+        "key_points": ["Highlight leadership initiative", "Show measurable outcomes"]
+      }
+    ],
+    "technical_questions": [
+      {
+        "question": "How would you design a scalable API for high traffic?",
+        "topic_area": "System Design",
+        "suggested_approach": "Start with requirements, then discuss architecture, scaling strategies, and trade-offs",
+        "key_points": ["Load balancing", "Caching strategies", "Database optimization"]
+      }
+    ],
+    "situational_questions": [
+      {
+        "question": "What would you do if you disagreed with a technical decision made by your team lead?",
+        "scenario_type": "Conflict Resolution",
+        "suggested_approach": "Show respect for hierarchy while demonstrating ability to advocate for better solutions",
+        "key_points": ["Data-driven communication", "Team collaboration"]
+      }
+    ],
+    "general_tips": ["Research the company thoroughly", "Prepare 3-5 questions to ask the interviewer"],
+    "preparation_summary": "Focus on demonstrating relevant technical skills and leadership experience aligned with the job requirements."
+  }
+}

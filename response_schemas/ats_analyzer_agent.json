@@ -1,0 +1,36 @@
+{
+  "agent_name": "ATS Analyzer Agent",
+  "agent_id": "69a1bf41fd4a0d8eaf318fe7",
+  "description": "Analyzes the match between a resume and job description. Produces an ATS compatibility score (0-100), identifies matching keywords, missing keywords, skill gaps, and provides a detailed breakdown of how well the resume matches the job requirements.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "ats_score": "number",
+    "score_breakdown": {
+      "keyword_match": "number",
+      "skills_match": "number",
+      "experience_relevance": "number",
+      "education_match": "number"
+    },
+    "matching_keywords": ["string"],
+    "missing_keywords": ["string"],
+    "skill_gaps": ["string"],
+    "strengths": ["string"],
+    "summary": "string"
+  },
+  "example_response": {
+    "ats_score": 72,
+    "score_breakdown": {
+      "keyword_match": 65,
+      "skills_match": 78,
+      "experience_relevance": 80,
+      "education_match": 70
+    },
+    "matching_keywords": ["Python", "machine learning", "data analysis"],
+    "missing_keywords": ["Kubernetes", "CI/CD", "Terraform"],
+    "skill_gaps": ["Cloud infrastructure experience", "DevOps practices"],
+    "strengths": ["Strong technical background", "Relevant project experience"],
+    "summary": "Your resume shows a solid foundation with a 72% ATS match score."
+  }
+}

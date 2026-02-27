@@ -1,0 +1,34 @@
+{
+  "agent_name": "Resume Optimizer Agent",
+  "agent_id": "69a1bf4fabdc4bd23cd13a0a",
+  "description": "Takes a resume and job description, then produces optimized resume sections. Rewrites professional summary, experience bullet points, and skills section to better align with the target job. Provides before/after comparisons and specific improvement suggestions.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "optimized_summary": "string",
+    "optimized_bullets": [
+      {
+        "original": "string",
+        "optimized": "string",
+        "improvement_note": "string"
+      }
+    ],
+    "suggested_skills": ["string"],
+    "improvement_tips": ["string"],
+    "overall_assessment": "string"
+  },
+  "example_response": {
+    "optimized_summary": "Results-driven software engineer with 5+ years of experience in full-stack development...",
+    "optimized_bullets": [
+      {
+        "original": "Worked on backend systems",
+        "optimized": "Architected and deployed scalable backend microservices handling 10K+ requests/second, reducing latency by 40%",
+        "improvement_note": "Added quantifiable metrics and action verbs to demonstrate impact"
+      }
+    ],
+    "suggested_skills": ["Python", "React", "AWS", "Docker"],
+    "improvement_tips": ["Add more quantifiable achievements", "Include relevant certifications"],
+    "overall_assessment": "Your resume has strong foundations but needs more targeted keywords and quantifiable results."
+  }
+}

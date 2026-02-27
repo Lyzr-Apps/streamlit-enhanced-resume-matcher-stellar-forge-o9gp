@@ -1,21 +1,78 @@
 {
-  "agents": [
-    {
-      "agent_id": "69a1bbfb94f34c9b935dc502",
-      "name": "Resume Analysis Agent",
-      "description": "Analyzes uploaded resume text against job category requirements. Produces structured output including match confidence scores, missing skills per category, skills needing improvement, recommended learning resources, and experience-level assessment for each job category.",
-      "provider_id": "OpenAI",
+  "project": "Job Application Copilot",
+  "pattern": "parallel_independent",
+  "agents": {
+    "ats_analyzer_agent": {
+      "agent_id": "69a1bf41fd4a0d8eaf318fe7",
+      "name": "ATS Analyzer Agent",
+      "description": "Analyzes the match between a resume and job description. Produces an ATS compatibility score (0-100), identifies matching keywords, missing keywords, skill gaps, and provides a detailed breakdown.",
+      "provider": "openai",
       "model": "gpt-4.1",
-      "temperature": 0.4,
+      "temperature": 0.3,
       "top_p": 0.95,
       "agent_type": "json",
+      "capabilities": ["text"],
       "has_tools": false,
       "has_knowledge_base": false,
       "has_voice": false,
       "has_image_output": false,
       "has_file_output": false,
-      "has_schedule": false
+      "has_schedule": false,
+      "response_schema_file": "response_schemas/ats_analyzer_agent.json"
+    },
+    "resume_optimizer_agent": {
+      "agent_id": "69a1bf4fabdc4bd23cd13a0a",
+      "name": "Resume Optimizer Agent",
+      "description": "Takes a resume and job description, then produces optimized resume sections with before/after comparisons and improvement suggestions.",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "agent_type": "json",
+      "capabilities": ["text"],
+      "has_tools": false,
+      "has_knowledge_base": false,
+      "has_voice": false,
+      "has_image_output": false,
+      "has_file_output": false,
+      "has_schedule": false,
+      "response_schema_file": "response_schemas/resume_optimizer_agent.json"
+    },
+    "outreach_writer_agent": {
+      "agent_id": "69a1bf5b27b2efe3a887dab7",
+      "name": "Outreach Writer Agent",
+      "description": "Generates personalized outreach materials including cover letters and LinkedIn messages based on resume and job description.",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "agent_type": "json",
+      "capabilities": ["text"],
+      "has_tools": false,
+      "has_knowledge_base": false,
+      "has_voice": false,
+      "has_image_output": false,
+      "has_file_output": false,
+      "has_schedule": false,
+      "response_schema_file": "response_schemas/outreach_writer_agent.json"
+    },
+    "interview_coach_agent": {
+      "agent_id": "69a1bf6b63cead3f400eb1f5",
+      "name": "Interview Coach Agent",
+      "description": "Predicts likely interview questions and provides STAR-method response frameworks, key talking points, and tailored interview tips.",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "agent_type": "json",
+      "capabilities": ["text"],
+      "has_tools": false,
+      "has_knowledge_base": false,
+      "has_voice": false,
+      "has_image_output": false,
+      "has_file_output": false,
+      "has_schedule": false,
+      "response_schema_file": "response_schemas/interview_coach_agent.json"
     }
-  ],
-  "workflow_pattern": "single_agent"
+  }
 }
