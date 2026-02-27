@@ -1,0 +1,80 @@
+{
+  "agent_name": "Resume Analysis Agent",
+  "agent_id": "69a1bbfb94f34c9b935dc502",
+  "description": "Analyzes uploaded resume text against job category requirements. Produces structured output including match confidence scores, missing skills per category, skills needing improvement, recommended learning resources, and experience-level assessment for each job category.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "top_match": {
+      "category": "string",
+      "score": "number",
+      "summary": "string"
+    },
+    "categories": [
+      {
+        "name": "string",
+        "match_score": "number",
+        "missing_skills": [
+          "string"
+        ],
+        "skills_to_improve": [
+          "string"
+        ],
+        "experience_level": "string",
+        "experience_rationale": "string",
+        "learning_recommendations": [
+          {
+            "skill": "string",
+            "resource": "string",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "overall_summary": "string",
+    "strongest_skills": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "top_match": {
+      "category": "sample string",
+      "score": 0,
+      "summary": "sample string"
+    },
+    "categories": [
+      {
+        "name": "sample string",
+        "match_score": 0,
+        "missing_skills": [
+          "sample string"
+        ],
+        "skills_to_improve": [
+          "sample string"
+        ],
+        "experience_level": "sample string",
+        "experience_rationale": "sample string",
+        "learning_recommendations": [
+          {
+            "skill": "sample string",
+            "resource": "sample string",
+            "type": "sample string"
+          }
+        ]
+      }
+    ],
+    "overall_summary": "sample string",
+    "strongest_skills": [
+      "sample string"
+    ]
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}
